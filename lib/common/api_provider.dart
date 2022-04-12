@@ -36,7 +36,7 @@ class APIProvider {
     Response response,
     String url,
   ) async {
-    final Map<String, dynamic> res = response.data is Map ? response.data : {};
+    final res = response.data is List ? response.data : {};
 
     var responseJson = Map<String, dynamic>();
     responseJson['data'] = res;
